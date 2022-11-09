@@ -45,6 +45,7 @@ Array.from(box).forEach(element=>{
         if(boxText.innerText === ""){
         boxText.innerText = turn;
         turn = Changeturn();
+        clickSound.currentTime =0;
         clickSound.play();
         winFunction();
         if(!gameover){
