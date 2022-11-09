@@ -28,7 +28,6 @@ const winFunction =()=>{
             document.getElementById("winTitle").innerHTML = boxText[e[0]].innerText +" Wins";
             document.getElementById('dance').style.width ="300px";
             document.getElementById('winTitle').style.width ="200px";
-            document.getElementById('game').style.display ='none';
             document.getElementById('reloadDialoag').innerText = "Reset to start a now game"
             boxText[e[0]].style.color="#1ED760";
             boxText[e[1]].style.color="#1ED760";
