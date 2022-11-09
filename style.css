@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Ubuntu&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1ED760;
+    height: 60px;
+    cursor: pointer;
+    position: sticky;
+    top:0px;
+    box-shadow: 1px 1px 3px black ;
+    
+}
+nav ul{
+    list-style: none;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    text-shadow: 3px 3px black;
+    letter-spacing: 5px;
+    transition: 1s;
+    animation-name: navanimation;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+    
+    
+}
+nav ul:hover{
+    color: white;
+    transform:  translateY(5px);
+}
+
+@keyframes navanimation {
+    0%{margin-left: -100vw;}
+    100%{margin-left: 0vw;}
+}
+
+.gameinfo{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+
+.box{
+    font-size: 8vw;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #abe2be;
+    color: white;
+}
+/* .dance{
+    display: none;
+} */
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.info{
+    margin: 20px;
+}
+.info h1,h4,button{
+    margin-bottom: 20px;
+}
+button{
+    background-color: #1ED760;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: medium;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+button:hover{
+    background-color: purple;
+    color: white;
+    transform: translateY(5px);
+}
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.winTitle{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.dance{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin-left: -60px;
+}
+
+@media (min-width:300px) and (max-width:800px) {
+    .gameinfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .game{
+        display: grid;
+        grid-template-columns: repeat(3,25vw);
+        grid-template-rows: repeat(3,25vw);
+        margin-top: -10px;
+    }
+    .box{
+        font-size: 15vw;
+    }
+    .info{
+        margin-top: 30px;
+    }
+    .info h1{
+        font-size: 18px;
+        text-align: center;
+    }
+}
