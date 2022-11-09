@@ -25,6 +25,8 @@ const winFunction =()=>{
         if( (boxText[e[0]].innerText === boxText[e[1]].innerText) && (boxText[e[2]].innerText === boxText[e[1]].innerText) && (boxText[e[0]].innerText !== "")){
             document.getElementById("turnInfo").innerText = boxText[e[0]].innerText + " Wins"
             gameover = true;
+            let VictoryAudio = new Audio('victorySound.mp3');
+            VictoryAudio.play();
             document.getElementById("winTitle").innerHTML = boxText[e[0]].innerText +" Wins";
             document.getElementById('dance').style.width ="300px";
             document.getElementById('winTitle').style.width ="200px";
